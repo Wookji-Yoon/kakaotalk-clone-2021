@@ -130,8 +130,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  will-change: transform;
-  transition: all 0.4s ease-in-out;
 }
 
 .reply__column:last-child button {
@@ -159,19 +157,16 @@
   border: var(--main-border);
   border-radius: 20px;
   font-size: 16px;
+  transition: all 0.5s ease-in-out;
 }
 
 .reply:focus-within .reply__column:first-child,
 .reply:focus-within .fa-smile-wink,
 .reply:focus-within button {
   opacity: 0;
-  display: none;
 }
 
-.reply:focus-within .reply__column:last-child {
-  width: 100%;
-  transform: translateY(-80px);
-}
-.reply:focus-within {
-  transform: translateY(80px);
+.reply:focus-within input {
+  width: 100vw;
+  transform: translateX(-10%);
 }
